@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<head>
+<meta charset="utf-8" />
+<meta content='width=device-width' name='viewport'/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+<link rel="stylesheet"  href="css/jquery.mobile-1.3.2.min.css">
+<script src="js/jquery.js"></script>
+<script src="js/jquery.mobile-1.3.2.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
+<script src="js/index.js"></script>
+    
+
+<title>E-BOOK FIREBASE SERIE A</title>
+<meta content='Facebook Ads Mastery' name='keywords'/>
+</head>
+<body>
+
+     
+<!-------hompage start----->
+
+<div data-role="page" id="page" data-theme="d"><div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="b">
+<h1>Table of Contents</h1>
+</div>
+
+<div data-role="content">
+    <ul data-role="listview" data-autodividers="false" data-inset="true" data-filter="true"data-filter-placeholder="Search Contents">
+
+<!------Add Listview 1---->
+
+<li data-theme="c"><a href="#page1" data-transition="flow">
+            <h3>#1 Pengantar Web Hosting</h3><P>Pengenalan Firebase Hosting</P></a><a href="#page1" data-transition="flow"></a> 
+</li>
+
+<!------Ending Listview 1---->
+
+<!------Add Listview 2---->
+
+<li data-theme="c"><a href="#page2" data-transition="flow">
+            <h3>#2 Environment Web Development</h3><P>Persiapan Lingkungan Pengembangan Web</P></a><a href="#page2" data-transition="flow"></a> 
+</li>
+
+<!------Ending Listview 2---->
+
+
+<!------Add Listview 3---->
+
+<li data-theme="c"><a href="#page3" data-transition="flow">
+            <h3>#3 Integrasi Web Firebase Hosting</h3><P>Panduan Menghubungkan Hosting Firebase CLI</P></a><a href="#page3" data-transition="flow"></a> 
+</li>
+
+<!------Ending Listview 3---->
+
+<!------Add Listview 4---->
+
+<li data-theme="c"><a href="#page4" data-transition="flow">
+            <h3>#4 Initialize Web Hosting Project</h3><P>Panduan Inisialisasi Project Hosting Firebase </P></a><a href="#page4" data-transition="flow"></a> 
+</li>
+
+<!------Ending Listview 4---->
+
+<!------Add Listview 5---->
+
+<li data-theme="c"><a href="#page5" data-transition="flow">
+            <h3>#5 Mode Pengembangan Lokal Web</h3><P>Panduan Mengatur Mode Pengembangan Localhost:5000</P></a><a href="#page5" data-transition="flow"></a> 
+</li>
+
+<!------Ending Listview 5---->
+
+<!------Add Listview 6------>
+
+<li data-theme="c"><a href="#page6" data-transition="flow">
+            <h3>#6 Hosting Multi Situs Firebase</h3><P>Panduan Mengatur Hosting Multi Situs</P></a><a href="#page6" data-transition="flow"></a> 
+</li>
+
+<!------Ending Listview 6----->
+<!------Add Listview 7------>
+
+<li data-theme="c"><a href="#page7" data-transition="flow">
+            <h3>#7 Deploy Site Firebase Hosting</h3><P> Panduan Upload Website ke Hosting Firebase</P></a><a href="#page7" data-transition="flow"></a> 
+</li>
+
+<!------Ending Listview 7----->
+
+</ul>
+          
+         </div>
+ 
+<div data-role="footer" data-position="right" data-tap-toggle="false" data-theme="c">
+<p><button type="button" id="btn-logout" class="btn btn-default btn-block btn-flat" onclick="logout();"><i class="material-icons">
+exit_to_app
+</i></button></p>
+</div>
+
+<center>
+<div data-role="footer" data-position="fixed" data-tap-toggle="false" data-theme="c">
+<p><a href="https://e-compfast.blogspot.com/">&#169; E-compfast Digital Indonesia</a></p>
+</div>
+</center>
+
+
+
+</div>
+
+<!-------hompage end----->
+
+
+<!--=====header======-->
+<div data-role="page" id="page1" data-theme="d"><div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+
+<h1>PENGANTAR</h1>
+</div>
+<!--=====header end======-->
+
+<div data-role="content">
+<div id="t">
+
+<h2 class="post-title entry-title">PENGANTAR PANDUAN HOSTING</h2>
+<p>
+Assalamu’alaikum wr. wb, perkenalkan saya <b>Alam Santiko Wibowo</b> seorang Front End Developer. Saya berasal dari Cilacap, Jawa Tengah. Saya menulis buku ini berdasarkan pengalaman dalam pengembangan website menggunakan hosting firebase. E-book ini akan memberikan panduan bagaimana menggunakan hosting yang ada didalam firebase.<br/><br/>
+<b>Firebase</b> merupakan sebuah platform layanan tingkat tinggi yang dibutuhkan oleh seorang developer untuk membangun aplikasi mobile multi platform baik berbasis android maupun web. Dengan menggunakan firebase kita dapat dengan mudah mengontrol database yang aman dan hosting mudah dalam sekali klik, yang dapat membantu seorang Developer menghemat biaya dan waktu.<br/><br/>
+Dengan menggunakan firebase kita dapat membuat aplikasi tingkat tinggi yang aman dan mudah untuk dibuat secara langsung tanpa harus menyiapkan server. Dalam E-book Premium  Firebase ini saya akan memberikan seluruh ilmu dari pengalaman selama pengembangan project aplikasi firebase karena merasakan mudahnya layanan yang ditawarkan.<br/><br/>
+Untuk memulai, ada beberapa hal yang perlu Anda persiapkan:</p>
+<ul>
+<li>
+Membuat <a href="https://console.firebase.google.com/">Akun Firebase</li></a>
+<li>
+Membuat<a href="https://console.firebase.google.com/"> Project Firebase</li></a>
+<li>
+Install <a href="https://download.sublimetext.com/Sublime%20Text%20Build%203211%20Setup.exe">Sublime Text</a>
+</li>
+<li>
+Install <a href="https://nodejs.org/dist/v12.13.1/node-v12.13.1-x86.msi">Node Package Manager (NPM)</a>
+</li>
+<li>
+Koneksi Internet Yang lancar
+</li>
+</ul>
+<p>Jadi bagaimana, sudah siap belajar ? Praktekan e-book ini agar lebih maksimal pemahaman ilmu yang akan dipaparkan. Salam hangat & sukses buat teman-teman. Pesan terakhir saya, Belajar membuat kita tahu praktek membuat kita paham.
+</p>
+<br/>
+<p>Salam Sukses,<br/><br/>
+
+<b>Front End Developer</b></br>
+<a href="https://e-compfast.blogspot.com/">Alam Santiko wibowo</a>
+</p>
+</div>
+</div>
+
+<div data-role="footer" data-position="fixed" data-tap-toggle="false" data-theme="c">
+<a href="#pageone" data-rel="back" data-icon="arrow-l" data-iconpos="" data-shadow="true" data-iconshadow="true">Kembali</a>
+</div>
+</div>
+<!--=======end pages======-->
+
+
+
+<!--=====header======-->
+<div data-role="page" id="page2" data-theme="d"><div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+
+<h1>DEVELOPMENT ENVIRONMENT</h1>
+</div>
+<!--=====header end======-->
+
+<div data-role="content">
+<div id="t">
+
+<h2 class="post-title entry-title">LINGKUNGAN PENGEMBANGAN FIREBASE</h2>
+<p>
+Untuk menyiapkan Lingkungan Pengembangan Firebase (Environment Development Firebase) sangat mudah hanya dalam beberapa langkah kita dapat menyiapkannya. Silahkan ikuti langkah-langkah dibawah ini.<br/>
+<p>Cara Menyiapkan Lingkungan Firebase, melalui tiga langkah sebagai berikut:
+<ol>
+<li>
+Buat folder dengan nama <b>public</b> di dalam direktori Local Komputer yang dipilih.</li>
+<img src="gambar/public-folder.webp"/>
+<li>
+Buka dan jalankan Text Editor Favorite seperti <b>Sublime text,</b> VS studio, dan lainnya. Buatlah file <b>index.html</b> didalam text editor dan simpan di <b>folder public.</b> Silahkan Edit File HTML disamakan dengan mengikuti gambar dibawah ini:</li>
+<img src="gambar/membuat-file-baru.webp"/>
+<img src="gambar/menyimpan-file.webp"/>
+
+<img src="gambar/hasil-simpan.webp"/>
+
+<img src="gambar/edit-file-html.webp"/>
+<img src="gambar/html-siap-upload.webp"/>
+
+<li>
+<a href="#">Install Node Package Manager (NPM) atau NODE JS</a> yang berguna untuk menjalankan Firebase CLI. Sekarang jalankan terminal <b>Command Prompt</b> didalam direktori Local Komputer yang berisi folder <b>public</b>. Untuk lebih jelasnya lihat pada gambar dibawah ini </li>
+<img src="gambar/run-cmd.webp"/>
+<p>Selamat tahap pertama sudah kita pelajari. Langkah selanjutnya, Kita akan belajar <a href="#page3"><b>Bagaimana Menghubungkan Firebase CLI</b></a> untuk dapat menggunakan layanan Hosting Firebase Gratis.
+</p>
+</ol>
+
+
+</div>
+</div>
+
+<div data-role="footer" data-position="fixed" data-tap-toggle="false" data-theme="c">
+<a href="#pageone" data-rel="back" data-icon="arrow-l" data-iconpos="" data-shadow="true" data-iconshadow="true">Kembali</a>
+</div>
+</div>
+<!--=======end pages======-->
+
+
+<!--=====header======-->
+<div data-role="page" id="page3" data-theme="d"><div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+
+<h1>Firebase CLI</h1>
+</div>
+<!--=====header end======-->
+
+<div data-role="content">
+<div id="t">
+
+<h2 class="post-title entry-title">INTEGRASI WEB DENGAN FIREBASE CLI</h2>
+<p>
+Apa itu integrasi Firebase CLI ? Mari kita bahas singkat saja dan tidak membuang waktu, secara sederhana dapat diartikan sebagai jembatan yang menghubungkan 2 tempat. Yakni, antara firebase CLI dengan website kita. Sebelum masuk pada tahap integrasi pastikan kita memiliki akun firebase dan telah membuat project. Jika belum buat silahkan kunjungi <a href="https://console.firebase.google.com/">https://console.firebase.google.com/</a>.</p>
+<p>
+	Dengan adanya CLI di firebase kita dapat mengakses database dan hosting yang bersifat clouds, dikarenakan sudah terhubung dengan Command Line Interface (CLI). Sudah paham ? Let’s Go ! praktekan.
+</p>
+<p>Mari lakukan langkah-langkah Berikut:</p>
+<ol>
+
+<li>Langkah pertama yang paling penting aktifkan terlebih dahulu aplikasi <b>Web Project</b> di akun Firebase kita. Lihat step by step gambar dibawah ini:
+
+    <p><img src="gambar/aktivasi-web-app.png" alt="aktivasi web app firebase e-compfast digital" /></p>
+    <p><img src="gambar/langkah-aktivasi-web-app.png" alt="aktivasi web app firebase e-compfast digital"/></p>
+    <p><img src="gambar/aktivasi-web-app-02.png" alt="aktivasi web app firebase e-compfast digital"/></p>
+    <p><img src="gambar/aktivasi-web-app-03.png" alt="aktivasi web app firebase e-compfast digital"/></p>
+    <p><img src="gambar/aktivasi-web-app-04.png" alt="aktivasi web app firebase e-compfast digital"/></p>
+    <p><img src="gambar/aktivasi-web-app-berhasil.png" alt="aktivasi web app firebase e-compfast digital"/></p>
+
+</li>
+
+<li>
+Setelah mengaktifkan <b>Web Aplikasi</b> di Akun Firebase kita jalankan Terminal Command Prompt yang mengarah pada direktori folder bernama public dan berisi file index.html didalamnya.
+<p><img src="gambar/run-cmd.png" alt="npm instal -g firebase-tools" /></p>
+</li>
+<li>
+    Dengan memberikan perintah $npm install –g firebase-tools, terminal kita akan mendownload secara otomatis file yang dibutukan untuk integrasi(Hosting Connection). Lakukan perintah Install firebase-tools dengan ketikan: <b>$npm install –g firebase-tools.</b>
+<p><img src="gambar/npm-install-firebase-tools.png" alt="npm instal -g firebase-tools" /></p>
+</li>
+<li>
+Tunggu sampai proses selesai, membutuhkan waktu 2-5 menit tergantung koneksi masin-masing.
+<p><img src="gambar/npm-install-firebase-loading.png" alt="npm instal -g firebase-loading" /></p>
+</li>
+
+<li>
+Setelah selesai, ketikan perintah: <b>$firebase login</b> untuk proses otentikasi data akun yang telah terdaftar. Secara otomatis akan di arahkan ke browser default untuk proses login menggunakan akun google.
+<p>
+<img src="gambar/firebase-login-start.png" alt="firebase login start" />
+<img src="gambar/firebase-login-sukses.png" alt="firebase-login-sukses" /></p>
+</li>
+
+<li>
+Selanjutnya, Jalankan perintah <b>$firebase init</b> untuk proses inisialisasi project firebase yang kita buat. Ikuti saja terlebih dahulu perintahnya sampai selesai dengan menekan tombol ENTER di keyboard. Kita akan membahas lebih dalam pada langkah berikutnya.
+<p><img src="gambar/firebase-init-start.png" alt="firebase-init" />
+<img src="gambar/firebase-init-confirmation.png" alt="firebase-init" />
+<img src="gambar/aktivasi-hosting-service-firebase.png" alt="firebase-init" /></p>
+<img src="gambar/memilih-project.png" alt="firebase-init" /></p>
+</li>
+</li>
+
+<li>
+Selamat tahap integrasi sudah berhasil selanjutnya kita akan melanjutkan <a href="#page4"><b> Bagaimana Proses Inisialiasi Project Untuk Menggunakan Hosting Firebase.</b></a>
+</li>
+
+</div>
+</div>
+
+<div data-role="footer" data-position="fixed" data-tap-toggle="false" data-theme="c">
+<a href="#pageone" data-rel="back" data-icon="arrow-l" data-iconpos="" data-shadow="true" data-iconshadow="true">Kembali</a>
+</div>
+</div>
+<!--=======end pages======-->
+
+<!--=====header======-->
+<div data-role="page" id="page4" data-theme="d"><div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+
+<h1>INISIALISASI HOSTING</h1>
+</div>
+
+<!--=====header end======-->
+
+<div data-role="content">
+<div id="t">
+
+<h2 class="post-title entry-title">INISIALISASI FIREBASE HOSTING</h2>
+<p>
+Inisialisasi hosting firebase merupakan tahap lanjutan dari langkah-langkah sebelumnya telah kita lakukan dengan perintah <b>$firebase init,</b> Perintah tersebut merupakan bagian dari inisialisasi hosting. <b>Inisialisasi Hosting Firebase</b> merupakan cara memilih project hosting website kita, Inisialisasi ini akan dieksekusi oleh server Firebase CLI.</p>
+
+<p>Pada tahap ini kita akan mengenal lebih dalam bagaimana inisialisai berjalan. Dengan demikian pada saatnya kita mengatur hosting website secara leluasa. Coba sekarang buka lagi folder <b>public</b>  yang sebelumnya kita buat. Apakah ada perubahan atau penambahan file setelah melakukan perintah $npm firebase init ?  tentu, sudah pasti kita melihat penambahan file seperti: <b>firebase.json, .firebaserc, index.html dan 404.html.</b></p>
+<p><img src="gambar/file-default-03.png"/></p>
+
+
+<p>File tersebut merupakan buatan firebase secara default atau otomatis. Sebetulnya tanpa membuat  <b>index.html</b> diawal panduan, firebase akan membuatkannya secara otomatis. Namun kita ingin membuat index.html dengan costume sendiri. Ketika memberikan perintah <b>$firebase init</b>  dan <b>telah membuat file index.html,</b>
+
+<p>Ada beberapa poin yang biasa ditanyakan ketika melakukan proses inisialisasi project perhatikan poin-poin dibawah ini:</p>
+<ol>
+    <li>
+<b><h3>Memilih Nama Project Firebase Hosting</h3></b>
+<p>Sebelumnya kita telah membuat nama project di akun firebase. Saat kita melakukan inisialisasi dengan menjalankan perintah $firebase init, Firebase CLI akan memberikan pilihan kepada user untuk menggunakan beberapa project yang telah dibuat dengan menekan tombol ENTER untuk memilih. Apabila kita membuat banyak project dan memutuskan memilih project yang lain gunakan tanda panah Atas/Bawah pada keyboard dan tekan ENTER.</p>
+<img src="gambar/Memilih-project-hosting.png" alt="memilih project firebase hosting" />
+<img src="gambar/pilihan-project.png" alt="pilihan project firebase hosting" />
+<img src="gambar/folder-hosting.png" alt="pilihan project firebase hosting" />
+</li>
+<li>
+<b><h3>File HTML Default Yang Di Hosting</h3></b>
+<p><b>File public/index.hml already exist. overwrite y/n ?</b> (File index.html didalam folder public sudah ada, apakah kamu ingin menulis ulang index.html ? ya/tidak). 
+
+    <p>Kita ketikan <b>No</b> karna sudah dibuat diawal. Kalau belum membuatnya ketikan <b>Yes.</b> Mudah bukan ?</b></p>
+
+    <p>
+    <img src="gambar/yes-or-no.png"/></p>
+
+</li>
+
+<p>
+Untuk <b>file 404.html</b> hampir sama dengan proses inisialisasi index.html, yang membedakan nya disini kita akan diberikan pilihan untuk membuat Default Web atau Single Web. Jika memilih default web maka firebase akan membuatkan file 404.html. Sedangkan Single Web firebase tidak akan membuatkan file tersebut. Ingat tinggal ketikan yes atau no saja di dalam terminal.
+</p>
+
+<h3>File Tambahan Wajib</h3>
+<ul>
+    <p>
+    <img src="gambar/file-default.png"/></p>
+<li>Harus diingat ada 4 file tambahan wajib ada dalam project web hosting adalah <b>firebase.json</b>, <b>.firebaserc</b>, <b>.gitignore</b> dan <b>firebase-debug</b>. Tanpa file-file tersebut hosting tidak akan berjalan dengan baik. Tidak usah khawatir file tersebut akan dibuatkan secara default saat kita melakukan perintah <b>$firebase init</b>.
+    <p><img src="gambar/file-default-02.png"/></p>
+ </li>
+</ul>
+
+<p>Selamat kita telah belajar bagaimana proses inisialiasai bekerja dan memahami system default inisialisasi firebase. Selanjutnya kita akan belajar<a href="#page5"> <b>Mengaktifkan Mode Pengembangan firebase local.</b></a></p>
+
+
+</div>
+</div>
+
+<div data-role="footer" data-position="fixed" data-tap-toggle="false" data-theme="c">
+<a href="#pageone" data-rel="back" data-icon="arrow-l" data-iconpos="" data-shadow="true" data-iconshadow="true">Kembali</a>
+</div>
+</div>
+<!--=======end pages======-->
+
+<div data-role="page" id="page5" data-theme="d"><div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+
+<h1>MODE DEVELOPMENT</h1>
+</div>
+
+<div data-role="content">
+<div id="t">
+
+<h2 class="post-title entry-title">MENGAKTIFKAN PENGEMBANGAN LOKAL</h2>
+<p>Mengatur Mode Pengembangan Firebase dengan mengaktifkan server localhost untuk melakukan permintaan melalui api dan testing aplikasi web kita ketikan perintah $firebase serve didalam terminal aktif dengan direktori folder default.
+<p><img src="gambar/firebase-serve-start.png" alt="firebas serve command" /></p>
+
+<p>Tunggu sampai proses selesai. Maka CLI akan memberikan alamat URL 
+<a href="https://localhost:5000">https://localhost:5000</a>.</p>
+<p>
+Silahkan buka di browser, dengan membuka URL tersebut. Coba edit file index.html kita dapat melihat perubahan ketika mengubah kode html di dalam text editor dan hasilnya akan dikirimkan ke alamat tersebut.
+
+</p>
+<p><img src="gambar/firebase-serve-get-link.png" alt="firebas serve command" />
+<img src="gambar/mode-pengembangan-aktif.png" alt="mode pengembangan lokal firebase" />
+</p>
+<p>Bagiamana hasilnya sudah terlihat ? Jika belum berarti project belum terinisialisasi. Silahkan ulangi proses inisialisasinya. Apabila sudah terlihat, lanjutkan panduan berikutnya <a href="#page6"><b>Bagaimana Cara Mengatur Banyak Multi Situs Firebase Hosting.</b></a>
+</p>
+
+
+</div>
+</div>
+
+<div data-role="footer" data-position="fixed" data-tap-toggle="false" data-theme="c">
+<a href="#pageone" data-rel="back" data-icon="arrow-l" data-iconpos="" data-shadow="true" data-iconshadow="true">Kembali</a>
+</div></div>
+
+<!-====-end pages-====->
+
+
+<div data-role="page" id="page6" data-theme="d"><div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+
+<h1>MULTI SITUS FIREBASE</h1>
+</div>
+
+<div data-role="content">
+<div id="t">
+
+<h2 class="post-title entry-title">MENGATUR HOSTING MULTI SITUS</h2>
+<p>
+Ok bagaimana sudah mempraktekannya dengan baik ya.. ? Saya kira begitu. kalau belum paham langkah-langkah sebelumnya, mungkin pada tahap ini akan lebih sulit. Sebaliknya kalau sudah paham semua langkah sebelumnya, tahap ini sangatlah mudah. Untuk mengatur hosting multi situs kita harus memahami isi firebase.json pada saat file json tersebut terinisialisasi.</p>
+<p>
+Coba sekarang buka lagi file folder public didalam sublime text. Buka isi firebase.json, dan pahami kodenya. Secara umum firebase.json akan menulis default hosting berisikan kode seperti pada gambar dibawah ini :
+</p>
+<p>
+<img src="gambar/firebase-json.png" alt="Mengaktifkan Multisitus" /></p>
+
+
+</p>
+<p>Kita akan focus pada data json dengan nama <b>public : public</b> dimana kita menyimpan data asset file index.html. Untuk data yang lainnya abaikan saja dulu, bentuk data yang bertanda merah memberitahukan kepada firebase bahwa folder public yang ingin kita upload filenya.</p>
+
+<p>Data json tersebut akan di eksekusi saat proses inisialisasi hosting. Jadi kesimpulannya kita dapat mengatur nama folder mana yang ingin di upload ke firebase hosting. Kemudian kita dapat memindahkan source website ke project yang lainya dengan membuatkan perintah firebase init lagi. Tetapi menggunakan perintah tersebut akan lebih lama, kita akan menggunakan cara cepat yakni mengganti konfigurasi nama <b>Status Project Hosting</b> didalam file tambahan <b>firebaserc</b> yang telah terinisialisasi. Sesuaikan Nama Status Project Default berdasarkan project masing-masing.</p>
+
+<img src="gambar/firebaserc.png" alt="Mengaktifkan Multisitus" />
+
+<p>Nah bagaimana caranya kita membuat banyak situs di firebase ? Jawabannya gampang banget !. Silahkan masuk ke akun firebase, Masuk ke project sudah kita buat, Buka menu hosting tambahkan situs lainnya. Lihat dan Ikuti langkah-langkah dibawah ini sampai selesai.</p>
+<p>
+<img src="gambar/menu-hosting.png" alt="konfigurasi multi situs firebase" />
+
+<img src="gambar/menu-hosting-02.png" alt="konfigurasi multi situs firebase" />
+<img src="gambar/menu-hosting-03.png" alt="konfigurasi multi situs firebase" />
+<img src="gambar/menu-hosting-04.png" alt="konfigurasi multi situs firebase" />
+<img src="gambar/menu-hosting-05.png" alt="konfigurasi multi situs firebase" />
+<img src="gambar/menu-hosting-06.png" alt="konfigurasi multi situs firebase" />
+
+
+<p>Selamat tahap mengatur dan menaktifkan multi situs sudah kita kuasai kalau belum jangan ragu untuk tanya ya. Mari kita lanjutkan bagaimana web statis buatan kita dapat di akses secara umum oleh orang-orang di internet. Yakni, upload asset folder public ke firebase hosting. Ikuti Panduan selanjutnya. <a href="#page7"><b>Bagaimana Cara Upload Website Ke Firebase Hosting.</b></a></p>
+</div>
+</div>
+
+
+<div data-role="footer" data-position="fixed" data-tap-toggle="false" data-theme="c">
+<a href="#pageone" data-rel="back" data-icon="arrow-l" data-iconpos="" data-shadow="true" data-iconshadow="true">Kembali</a>
+</div></div>
+
+
+<div data-role="page" id="page7" data-theme="d"><div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+
+<h1>FIREBASE DEPLOY</h1>
+</div>
+
+<div data-role="content">
+<div id="t">
+
+<h2 class="post-title entry-title">DEPLOY WEB KE HOSTING FIREBASE
+</h2>
+<p>
+Pada langkah sebelumnya sudah kita bahas bagaimana membuat mode pengembangan atau testing web statis dengan server firebase. Pada tahap ini kita akan belajar bagaimana men-deploy web statis ke firebase hosting. Apa sih deploy itu ? deploy kebalikan dari istilah mode pengembangan. Sudah jelas ya.. Jadi deploy itu hasil production website (Web jadi). Website yang sudah kita buat dan yakin web tersebut ingin kita upload ke hosting serta siap dilihat oleh banyak orang. Pada tahap terakhir <b>Firebase E-book Serie A</b> ini saya akan memberikan contoh website Login. Ok ! Mari kita praktek.
+</p>
+<img src="gambar/firebase-deploy-start.png" alt="firebase deploy" />
+<p>
+Pastikan file asset seperti index.html, 404.html dan lainnya yang ada didalam folder sudah diedit dan siap untuk di upload (deploy). Masuk ke Terminal Command Prompt yang masih aktif pada project public folder, ketikan perintah: <b>$firebase deploy</b>. Tunggu sampai proses upload selesai. Setelah itu buka di browser URL hosting yang telah berhasil kita deploy.</p>
+<img src="gambar/url-hosting-firebase.png" alt="firebase deploy" />
+
+<img src="gambar/url-hosting-firebase-02.png" alt="firebase deploy" />
+
+<p>Alhamdulilah, <b>E-book Firebase Serie A</b> sudah selesai. Pada E-book Serie 2 Pre-launch nanti kita membuat project website lebih keren lagi. Berikut daftar isi <b>E-book Serie B</b>: </p>
+
+<ol>
+    <li>Memahami CRUD Firebase </li>
+    <li>Membuat Website Membership</li>
+    <li>Membuat Secure Web Login</li>
+    <li>Membuat Web E-commerce Firebase</li>
+    <li>Membuat Web Blog Firebase</li>
+</ol>
+<p>Sampai jumpa di E-book Serie B, apabila punya pertanyaan tentang Serie A ini. Silahkan kirimkan melalui e-mail <a href="https://e-compfast.blogspot.com">alamhafidz01@gmail.com</a>.</p>
+</div>
+</div>
+
+
+<div data-role="footer" data-position="fixed" data-tap-toggle="false" data-theme="c">
+<a href="#pageone" data-rel="back" data-icon="arrow-l" data-iconpos="" data-shadow="true" data-iconshadow="true">Kembali</a>
+</div></div>
+
+
+</body>
+
+</html>
