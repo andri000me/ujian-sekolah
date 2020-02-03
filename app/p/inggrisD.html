@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="viewport" content="width=320; user-scalable=no" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+<title>Soal UN Bahasa Inggris</title>
+<link rel="stylesheet" type="text/css" href="css/jQuizMe.css"/>
+<link rel="stylesheet" href="assets/azima.css">
+</head>
+<body>
+
+
+</head>
+<body>
+
+
+<div id="quizArea"/>
+</body>
+<script type="text/javascript" src = "jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="jQuizMe-2.2.1.js"></script>
+<script type="text/javascript">
+$( function($){
+var quiz = {
+multiList: [
+{
+ques: "Do you buy this book from my friend? asked Jenny. Jenny wanted to know whether I … tht book from her friend.",
+ans: "Bought",
+ansSel: ["Will buy", "Has bought", "Buy"]
+},
+
+{
+ques: "The insect … stung my sister’s hand two days ago.",
+ans: "Which is a big bee with black body colour",
+ansSel: ["A big bee with black body colour", "A big bee which with black body colour", "It is a big bee with black body colour"]
+},
+
+{
+ques: "My father wanted to know …",
+ans: "If I had applied for the scholarship",
+ansSel: ["Whether I have applied for the scholarship", "Whether I applied for the scholarship", "If I applied for the scholarship"]
+},
+
+{
+ques: "… is unforgettable.",
+ans: "What we did in our last holiday in Bali",
+ansSel: ["What did we do in our last holiday in Bali", "What we do in our last holiday in Bali", "What do we do in our last holiday in Bali"]
+},
+
+{
+ques: "It will be possible …",
+ans: "That she will be able to make our situation get worse",
+ansSel: ["That will she be able to make our situation get worse",
+"Whether she will be able to make our situation get worse",
+"Whether she would be able to make our situation get worse"]
+},
+ 
+{
+ques: "Dinda always talks about her life experiences with …",
+ans: "Whoever will listen to her",
+ansSel: ["Will whoever listen to her", "Whomever will listen to her", "Will whomever listen to her"]
+},
+
+{
+ques: "Dinda always talks about her life experiences with …",
+ans: "If his teacher also works in Lampung University as a lecturer",
+ansSel: ["Which his teacher also worked in Lampung University as a lecturer", "Which does his teacher also work in Lampung University as a lecturer", "If does his teacher also work in Lampung University as a lecturer"]
+},
+
+{
+ques: "The increase in the sales of newcars... Expected to make traffic jams worse",
+ans: "Is",
+ansSel: ["Are", "Be","Being"]
+},
+{
+ques: "Little children are usually afraid of.... by their mother",
+ans: "Leaving",
+ansSel: ["Left", "To leave","Been left"]
+},
+{
+ques: "'When did you realize had lost your purse' 'When I ...., one to pay the conductor'",
+ans: "Had needed",
+ansSel: ["Have needed", "Was needing","Am needing"]
+},
+{
+ques: "'Why didn't Didi wan to go home?' 'His mother... him for causing the car accident'",
+ans: "had blamed",
+ansSel: ["is blaming", "has blamed","would blamed"]
+},
+{
+ques: "The way professor Mattis teaches English not only keeps the student interest....",
+ans: "But also increases their motivation",
+ansSel: ["And also increases their motivation", "But also increasing their motivation","And he also increases their motivation"]
+},
+//6-10
+{
+ques: "The thief... into the room through this window because there are footprint near the door.",
+ans: "Must have got",
+ansSel: ["Would rather get", "My get","Was to get"]
+},
+{
+ques: "He told me a lot about the Philippines. He .... there for a long time.",
+ans: "Must have lived",
+ansSel: ["Might be living", "Ought to have lived","Should be living"]
+},
+{
+ques: "Your son will be operated on tomorrow morning. He .... have a good rest tonight the doctor said.",
+ans: "Must",
+ansSel: ["Can", "May","Might"]
+},
+
+],
+},
+options = {
+help: "<justify> Jawablah soal pilihan ganda dengan menekan tombol A, B, C atau D !</justify>",
+intro: "Soal UN SMA/MA "+year+" <br><b>BAHASA INGGRIS</b><br>  Update "+month+" "+(year_now = d.getFullYear()),
+allRandom: true,
+title: "SOAL UN SMA/MA 2020"
+};
+$("#quizArea").jQuizMe(quiz, options);
+});
+</script>
+
+<p style="display: none" id='year'></p>
+<script>
+var d = new Date();
+var m = d.getMonth();
+var year;
+if (m>=9) {
+	year = document.getElementById("year").innerHTML = d.getFullYear()+1;
+}else if (m<9) {
+    year = document.getElementById("year").innerHTML = d.getFullYear();
+}
+if(m==0){month="Januari"}else if(m==1){month="Februari"}else if(m==2){month="Maret"}else if(m==3){month="April"}else if(m==4){month="Mei"}else if(m==5){month="Juni"}else if(m==6){month="Juli"}else if(m==7){month="Agustus"}else if(m==8){month="September"}else if(m==9){month="Oktober"}else if(m==10){month="November"}else if(m==11){month="Desember"}
+</script>
+
+</html>
+<justify>

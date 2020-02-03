@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="viewport" content="width=320; user-scalable=no" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+<title>Soal UN Bahasa Inggris</title>
+<link rel="stylesheet" type="text/css" href="css/jQuizMe.css"/>
+<link rel="stylesheet" href="assets/azima.css">
+</head>
+<body>
+
+
+</head>
+<body>
+
+
+<div id="quizArea"/>
+</body>
+<script type="text/javascript" src = "jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="jQuizMe-2.2.1.js"></script>
+<script type="text/javascript">
+$( function($){
+var quiz = {
+multiList: [
+{
+ques: "… is a break from your job and have a holiday for a while.",
+ans: "What you need",
+ansSel: ["You need", "Whether you need", "Why you need"]
+},
+
+{
+ques: "It is already known … water and solar energy are alternative energy source.",
+ans: "That",
+ansSel: ["Whether", "What", "In case"]
+},
+
+{
+ques: "Rina said to Johan, Did you finish your assignment? <br/> Rina asked Johan …",
+ans: "If he had finished his assignment",
+ansSel: ["If he finished his assignment", "Whether he has finish his assignment", "Whether he finished his assignment"]
+},
+
+
+{
+ques: "Mr. Linton asked his wife who called me just now? <br/> It means that …",
+ans: "Mr. Linton wanted to know who had called him",
+ansSel: ["Mr. Linton wants to know who calls him", "Mr. Linton wanted to know who called him", "Mr. Linton wants to know who called him"]
+},
+
+{
+ques: "No one is admitted in the university … she or he passes the entry test.",
+ans: "Whether",
+ansSel: ["As", "If", "Unless"]
+},
+
+{
+ques: "Do you buy this book from my friend? asked Jenny. Jenny wanted to know whether I … tht book from her friend.",
+ans: "Bought",
+ansSel: ["Will buy", "Has bought", "Buy"]
+},
+
+{
+ques: "The insect … stung my sister’s hand two days ago.",
+ans: "Which is a big bee with black body colour",
+ansSel: ["A big bee with black body colour", "A big bee which with black body colour", "It is a big bee with black body colour"]
+},
+
+{
+ques: "My father wanted to know …",
+ans: "If I had applied for the scholarship",
+ansSel: ["Whether I have applied for the scholarship", "Whether I applied for the scholarship", "If I applied for the scholarship"]
+},
+
+{
+ques: "Having given the prescription to the patient...",
+ans: "The doctor told the patient to take the medicine regulary",
+ansSel: ["The medicine was taken regulary by the patient", "The medicine had to be taken regulary by the patient","The patient was told to take the medicine regulary"]
+},
+{
+ques: "... A few million rupiahs, he went on a four to Europe",
+ans: "Having saved",
+ansSel: ["He has saved", "Has saved","Saved"]
+},
+//11-15
+{
+ques: "The fact that he was put into prison for something that he had not done made his wife...",
+ans: "Kering",
+ansSel: ["Kusut", "Gersang","Bebas"]
+},
+{
+ques: "The increase in the sales of newcars... Expected to make traffic jams worse",
+ans: "Is",
+ansSel: ["Are", "Be","Being"]
+},
+{
+ques: "Little children are usually afraid of.... by their mother",
+ans: "Leaving",
+ansSel: ["Left", "To leave","Been left"]
+},
+{
+ques: "'When did you realize had lost your purse' 'When I ...., one to pay the conductor'",
+ans: "Had needed",
+ansSel: ["Have needed", "Was needing","Am needing"]
+},
+{
+ques: "'Why didn't Didi wan to go home?' 'His mother... him for causing the car accident'",
+ans: "had blamed",
+ansSel: ["is blaming", "has blamed","would blamed"]
+},
+
+],
+},
+options = {
+help: "<justify> Jawablah soal pilihan ganda dengan menekan tombol A, B, C atau D !</justify>",
+intro: "Soal UN SMA/MA "+year+" <br><b>BAHASA INGGRIS</b><br>  Update "+month+" "+(year_now = d.getFullYear()),
+allRandom: true,
+title: "SOAL UN SMA/MA 2020"
+};
+$("#quizArea").jQuizMe(quiz, options);
+});
+</script>
+
+<p style="display: none" id='year'></p>
+<script>
+var d = new Date();
+var m = d.getMonth();
+var year;
+if (m>=9) {
+	year = document.getElementById("year").innerHTML = d.getFullYear()+1;
+}else if (m<9) {
+    year = document.getElementById("year").innerHTML = d.getFullYear();
+}
+if(m==0){month="Januari"}else if(m==1){month="Februari"}else if(m==2){month="Maret"}else if(m==3){month="April"}else if(m==4){month="Mei"}else if(m==5){month="Juni"}else if(m==6){month="Juli"}else if(m==7){month="Agustus"}else if(m==8){month="September"}else if(m==9){month="Oktober"}else if(m==10){month="November"}else if(m==11){month="Desember"}
+</script>
+
+</html>
+<justify>
