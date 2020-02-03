@@ -23,7 +23,7 @@
       if (!emailVerified){
         $("#verified-alert").fadeIn("slow");
       }else{
-        window.location.href = "/ujian";
+        window.location.href = "/ujian/index.html";
       }
     } else {
       console.log("Status belum diverifikasi");
