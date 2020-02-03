@@ -17,7 +17,7 @@
       if (user) {
         return true;
       } else {
-          window.location.href = "/p";
+          window.location.href = "/login";
         }
     });
   }
@@ -28,7 +28,7 @@
    function logout(){
     firebase.auth().signOut().then(function() {
       console.log("sign out berhasil");
-      window.location.href = "/p";
+      window.location.href = "/login";
     }).catch(function(error) {
       swal ( "Oops" ,  "Something went wrong!" ,  "error" )
     });
