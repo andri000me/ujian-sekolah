@@ -1,13 +1,13 @@
 // Your web app's Firebase configuration
   var config = {
-    apiKey: "AIzaSyAFThvhXDXQNaMbGU3Hqgbaiab4P92UY4c",
-    authDomain: "e-bookdigital.firebaseapp.com",
-    databaseURL: "https://e-bookdigital.firebaseio.com",
-    projectId: "e-bookdigital",
-    storageBucket: "e-bookdigital.appspot.com",
-    messagingSenderId: "939307484689",
-    appId: "1:939307484689:web:1ebe74f302c751b85b53b0",
-    measurementId: "G-V2G0WLPX3W"
+    apiKey: "AIzaSyAedQNccvGAzUrxSg0NSP-r_cgxG4TfOLs",
+    authDomain: "ujian-sekolah.firebaseapp.com",
+    databaseURL: "https://ujian-sekolah.firebaseio.com",
+    projectId: "ujian-sekolah",
+    storageBucket: "ujian-sekolah.appspot.com",
+    messagingSenderId: "904992602631",
+    appId: "1:904992602631:web:de75996276079a011908a2",
+    measurementId: "G-F3T5PJ9W60"
   };
   // Initialize Firebase
   firebase.initializeApp(config);
