@@ -155,9 +155,9 @@
 				restart: [ "Ulangi", "Ulangi Test" ],
 				details: [ "Detail", "Lihat Detaik Skor" ],
 				review: [ "Ulasan", "Ulasan Pertanyaan" ],
-				showOnlyMissed: [ " *", "Klik untuk menampilkan pertanyaan salah" ],
+				showOnlyMissed: [ " X ", "Klik untuk menampilkan pertanyaan salah" ],
 				quit: [ "Keluar", "Keluar Test" ],
-				quitNo: [ "->", "Kembali" ],
+				quitNo: [ " X ", "Kembali" ],
 				quitYes: [ '', "Ya, Keluar" ]
 			},
 			err:{
@@ -181,7 +181,7 @@
 			},
 			quiz:{
 				tfEqual: " = ",
-				tfEnd : "?",
+				tfEnd : " ?",
 				tfFalse: "False",
 				tfTrue: "True"
 			}
@@ -193,7 +193,7 @@
 		// !! Replace showOnlyMissed with an input button value="show only wrong" || "show right"
 		// !! Are delete showOnlyMisssed and have * for the missed questions.
 		if (!langBtn.quitYes[0]) {
-			langBtn.quitYes[0] = langBtn.quit[0] + "?";
+			langBtn.quitYes[0] = langBtn.quit[0] + " ?";
 		}
 		$(".q-missMarker", layout).html(langBtn.showOnlyMissed[0]);
 		langBtn.showOnlyMissed[0] = '';
