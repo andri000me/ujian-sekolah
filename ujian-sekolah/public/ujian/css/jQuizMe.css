@@ -249,6 +249,7 @@ body {
 /*This is a hack, because IE fails on float:right.*/
 
 .q-counter{
+    border-radius: 1%;
     display:block;
     font-size: 100%;
     text-align:center;
@@ -380,7 +381,7 @@ body {
 
 #q-timer-area{
     display:block;
-    /*border-radius: 50%;*/
+    border-radius: 1%;
     text-align:center;
     color: #fff;
     float: left;
