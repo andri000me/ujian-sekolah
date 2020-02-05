@@ -11,6 +11,13 @@
 	var _jQuizMeLayout = $("<div/>").addClass( "quiz-el").append( 
 		$("<div/>").addClass( "q-header q-innerArea").append(
 			$("<div/>").addClass( "q-counter"),
+			$("<div/>").attr("id" , "q-timer-area").append(
+
+				$("<div/>").attr("id", "q-timer")
+
+				),
+
+			
 			$("<div/>").addClass( "q-title")
 		),
 		$("<div/>").addClass( "q-help q-innerArea").append( 
@@ -29,8 +36,8 @@
 			$("<input type='button'/>").addClass( "q-details-btn q-reviewBar-btns" ),
 			$("<input type='button'/>").addClass( "q-review-btn q-reviewBar-btns" ),
 			$("<div/>").addClass( "q-reviewBar q-innerArea").append(
-				$("<input type='button'/>").attr({ "class": "q-leftArrow q-review-arrows", "value": "<-" }),
-				$("<input type='button'/>").attr({ "class": "q-rightArrow q-review-arrows", "value": "->" }),
+				$("<input type='button'/>").attr({ "class": "q-leftArrow q-review-arrows", "value": "<" }),
+				$("<input type='button'/>").attr({ "class": "q-rightArrow q-review-arrows", "value": ">" }),
 				$( "<span/>" ).addClass( "q-review-nav" ).append(
 					$("<select/>").addClass( "q-review-index-all q-review-index"),
 					$("<select/>").addClass( "q-review-index-missed q-review-index").hide(),
@@ -608,6 +615,34 @@
 					$( ".q-begin-btn", currQuiz ).unbind().one( "click", function(){
 						animateThis( $( ".q-intro", currQuiz ), 0, function(){ 
 							animateThis( $( ".q-prob", currQuiz ), 1, sendStatus );
+						//timer start
+						// var m = 1;
+						// var s = 0;
+
+						function timer() {
+
+						var m = 1; 
+						var s = 0;
+
+							if (s != 0) {
+								s--;
+							} else {
+								s = 59;
+								m--;
+							}
+							document.getElementById('q-timer-area').innerHTML = m + ":" + (s < 10 ? ("0" + s) : s);
+							if (s == 0 && m == 0) {
+								
+								document.getElementById('q-timer').innerHTML = "0:00";
+								clearInterval(timer);
+								console.log("Waktu habis !");
+							    result();
+							}
+						}
+						var x = setInterval(timer, 1000);
+						end timer
+
+						
 						});
 					});
 				}			

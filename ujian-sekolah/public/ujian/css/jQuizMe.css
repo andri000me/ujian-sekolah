@@ -48,6 +48,7 @@
     display: inline-block;
     font-size: 18px;
     font-weight: bold;
+    margin-right: 6px;
 }
 .q-begin-btn{ /*Mulai */
     background-color: #ECE205; /* Green */
@@ -70,18 +71,22 @@
     display: inline-block;
     font-size: 18px;
     font-weight: bold;
-    margin-right: 3px;
+    position: center
+
 }
 .q-next-btn{
     background-color: #ECE205; /* Green */
-      border: none;
-   color: #395187;
-      padding: 12px 12px;
-   text-align: center;
+    border: none;
+    color: #395187;
+    padding: 12px 12px;
+    text-align: center;
     text-decoration: none;
-      display: inline-block;
+    display: inline-block;
     font-size: 18px;
     font-weight: bold;
+    position: center
+    
+
 }
 .q-details-btn{ /* Detail */
     background-color: #098E45; /*Green */
@@ -235,19 +240,22 @@ body {
     overflow: hidden;
     width: 100%;
     margin: 0;
-   text-align: center;
+   /*text-align: center;*/
 }
 /*This is a hack, because IE fails on float:right.*/
+
 .q-counter{
-    position: absolute;
-    top: 0%;
-    right: 0%;
-    margin: 1%;
-    padding: 0%;
-}
-.q-counter{
+    display:block;
+    text-align:center;
+    color: #fff;
     float: right;
-}
+    background: #3f7df4;
+    margin: 1%;
+    padding: 2%;
+
+    }
+
+
 .q-help{
     position: relative;
     clear:both;
@@ -272,7 +280,7 @@ body {
     font-size: 100%;
     color:#000000;
     position: relative;
-   padding: 3px;
+   padding: 0;
    text-align: justify;
    
     
@@ -286,7 +294,7 @@ body {
     font-size: 100%;
     color:#ffffff;
     position: relative;
-   margin: 3px;
+    margin: 3px;
     
 }
 
@@ -295,10 +303,11 @@ body {
     border: thin Deepskyblue solid;
     font-size: 100%;
     position: relative;
-   margin:3px
+    margin:3px
 }
 .q-help-menu{
     width: 100%;
+    margin:3px;
 }
 .q-help-info{
     clear:both;
@@ -306,6 +315,7 @@ body {
 .q-quit-confirm, .q-quit-area, .q-review-arrows{
     display: inline;
     width: auto;
+
 }
 .q-quit-area{
     float: right;
@@ -339,7 +349,7 @@ body {
 .q-ol-hover{
     background: #F44336;
     color: #ffffff;
-  padding:4px;
+    padding: 0;
 }
 .q-ol-active{
     background: #6599fe;
@@ -347,17 +357,29 @@ body {
 }
 /*IE displays the wrong width for <select> tags.*/
 .q-select{
-    width : 100%;
-}
-.q-select{
     font-size: 100%;
     width: 100%;
 }
+
 .q-timer-area{
     display:block;
     text-align:center;
     width: auto;
+
+    
 }
+
+#q-timer-area{
+    display:block;
+    border-radius: 50%;
+    text-align:center;
+    color: #fff;
+    float: left;
+    background: #3f7df4;
+    margin: 1%;
+    padding: 2%;
+    }
+
 .q-review-menu{
     text-align: center;
     width: auto;
