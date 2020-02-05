@@ -25,7 +25,7 @@
     display: inline-block;
     font-size: 18px;
     font-weight: bold;
-    margin-right:8px;
+    margin-right: 8px;
 }
 .q-quitYes-btn{ /*Konfirmasi Ya */
     background-color: #4CAF50; /* Green */
@@ -184,7 +184,7 @@ body {
     padding: 0.2em;
 }
 .quiz-el div{
-    padding: 0.2em;
+    padding: 1%;
 }
 .quiz-el input{
     font-size: 100%;
@@ -195,6 +195,7 @@ body {
     position:relative;
     clear: both;
     color: #000000;
+    border: #3f7df4;
 }
 
 .q-help{
@@ -202,10 +203,11 @@ body {
     position:relative;
     clear: both;
     color: #000000;
+    border: #3f7df4;
 }
 .q-header{
     text-align:center;
-    background: #6599fe;
+    background: #293bca;
     position:relative;
     clear: both;
     color: #ffffff;
@@ -225,33 +227,37 @@ body {
     position:relative;
     clear: both;
     color: #000000;
-    border:thin Deepskyblue solid;
+    border: #3f7df4;
 }
 
 
 .q-header, .q-help, .q-review-menu {
-    border: thin Deepskyblue solid;
+    border: #3f7df4;
 }
 .q-intro{
     padding: 0.2em;
-   margin: 3px;
+   margin: 0px;
 }
 .q-title{
     overflow: hidden;
     width: 100%;
     margin: 0;
-   /*text-align: center;*/
+    background: #3f7df4;
+   text-align: center;
+   border-radius: 0px;
 }
 /*This is a hack, because IE fails on float:right.*/
 
 .q-counter{
     display:block;
+    font-size: 100%;
     text-align:center;
     color: #fff;
     float: right;
     background: #3f7df4;
-    margin: 1%;
-    padding: 2%;
+   margin-top: 1%;
+    margin-bottom: 1%;
+    
 
     }
 
@@ -259,6 +265,7 @@ body {
 .q-help{
     position: relative;
     clear:both;
+
 }
 /*.q-probArea = .q-ques, .q-ansSel, .q-result */
 
@@ -276,7 +283,7 @@ body {
 
 .q-ansSel{
     
-    border: thin Deepskyblue solid;
+    border: none;
     font-size: 100%;
     color:#000000;
     position: relative;
@@ -300,7 +307,7 @@ body {
 
 .q-probArea{
     
-    border: thin Deepskyblue solid;
+    border: none;
     font-size: 100%;
     position: relative;
     margin:3px
@@ -308,9 +315,11 @@ body {
 .q-help-menu{
     width: 100%;
     margin:3px;
+     border: #3f7df4;
 }
 .q-help-info{
     clear:both;
+    border: #3f7df4;
 }
 .q-quit-confirm, .q-quit-area, .q-review-arrows{
     display: inline;
@@ -371,13 +380,17 @@ body {
 
 #q-timer-area{
     display:block;
-    border-radius: 50%;
+    /*border-radius: 50%;*/
     text-align:center;
     color: #fff;
     float: left;
+    font-size: 100%;
     background: #3f7df4;
-    margin: 1%;
-    padding: 2%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+
+   /* padding: 3%;*/
+    
     }
 
 .q-review-menu{

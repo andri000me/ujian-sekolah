@@ -15,7 +15,7 @@
 
 				$("<div/>").attr("id", "q-timer")
 
-				),
+				).hide(),
 
 			
 			$("<div/>").addClass( "q-title")
@@ -609,20 +609,23 @@
 				$( ".q-title", currQuiz).html( settings.title );
 				setHelpBtn();
 				if( settings.intro ){
+
 					$( ".q-prob", currQuiz ).hide();
+					
 					$( ".q-intro-info", currQuiz ).html( settings.intro );
 					$( ".q-intro", currQuiz ).show();
 					$( ".q-begin-btn", currQuiz ).unbind().one( "click", function(){
 						animateThis( $( ".q-intro", currQuiz ), 0, function(){ 
-							animateThis( $( ".q-prob", currQuiz ), 1, sendStatus );
+						animateThis( $( ".q-prob", currQuiz ), 1, sendStatus );
+						$( "#q-timer-area").show();
+						$( "#q-timer").show();
+
 						//timer start
-						// var m = 1;
-						// var s = 0;
+						var m = 45;
+						var s = 0;
 
 						function timer() {
 
-						var m = 1; 
-						var s = 0;
 
 							if (s != 0) {
 								s--;
@@ -640,7 +643,7 @@
 							}
 						}
 						var x = setInterval(timer, 1000);
-						end timer
+						// end timer
 
 						
 						});
