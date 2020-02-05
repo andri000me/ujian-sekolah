@@ -175,8 +175,12 @@
         window.location.href = "/ujian/index.html";
       
     } else {
+      //tidak ada user terotentikasi
+
       console.log("Status belum diverifikasi");
     }
+
+     
   });
 
   $( "#btn-signin" ).click(function(e) {
